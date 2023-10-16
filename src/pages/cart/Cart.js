@@ -1,33 +1,30 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, descreaseCart, getTotals, removeFromCart } from "../../redux/features/product/CartSlice";
+import React from "react";
 
 const Cart = () => {
 
-  const cart = useSelector((state) => state.cart);
-  // console.log(cart.cartTotalAmount);
-  const dispatch = useDispatch();
+  
+  // const dispatch = useDispatch();
 
-  const handleRemoveFromCart = (cartItem) =>{
-    dispatch(removeFromCart(cartItem));
-  };
+  // const handleRemoveFromCart = (cartItem) =>{
+  //   dispatch(removeFromCart(cartItem));
+  // };
 
-  const handleDecreaseCart = (cartItem) =>{
-    dispatch(descreaseCart(cartItem));
-  };
+  // const handleDecreaseCart = (cartItem) =>{
+  //   dispatch(descreaseCart(cartItem));
+  // };
 
-  const handleIncreaseCart = (cartItem) => {
-    dispatch(addToCart(cartItem));
-  }
-  useEffect(() => {
-    dispatch(getTotals())
-  }, [cart,dispatch]);
+  // const handleIncreaseCart = (cartItem) => {
+  //   dispatch(addToCart(cartItem));
+  // }
+  // useEffect(() => {
+  //   dispatch(getTotals())
+  // }, [cart,dispatch]);
 
   
 
   return (
     <>
-      <div class="container mx-auto mt-10">
+      {/* <div class="container mx-auto mt-10">
         <div class="flex shadow-md my-10">
           <div class="w-3/4 bg-white px-10 py-10">
             <div class="flex justify-between border-b pb-3">
@@ -153,7 +150,7 @@ const Cart = () => {
           {/* <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
             Apply
           </button> */}
-          <div class="border-t mt-8">
+          {/* <div class="border-t mt-8">
             <div class="flex font-semibold justify-between py-6 text-2xl uppercase">
               <span>Total cost</span>
               <span>{cart.cartTotalAmount +10}</span>
@@ -163,10 +160,10 @@ const Cart = () => {
             </button>
           </div>
         </div>
-        </div>
+        </div> */}
 
         
-      </div>
+      {/* </div> */} 
     </>
   );
 };

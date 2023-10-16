@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 
-// import { useDispatch, useSelector } from "react-redux";
-// import { addToCart } from "../../redux/features/product/CartSlice";
 import api from "../../utils/api";
 
 const ProductDetail = () => {
@@ -23,7 +21,7 @@ const ProductDetail = () => {
       .catch((error) => {
         console.error('Error fetching products:', error.response);
       });
-  }, []);
+  }, [id]);
 
 
   
@@ -54,7 +52,7 @@ const ProductDetail = () => {
              <span className="font-semibold">Brand: {phoneDetail.brand ? phoneDetail.brand.name : ""}</span>
             
             <h3 className="flex justify-between text-gray-700 text-lg">
-              
+{/*               
               <div class="flex items-center">
                 <svg
                   class="w-4 h-4 text-yellow-300 mr-1"
@@ -75,7 +73,7 @@ const ProductDetail = () => {
                 >
                   73 reviews
                 </a>
-              </div>
+              </div> */}
               
             </h3>
             <div>
